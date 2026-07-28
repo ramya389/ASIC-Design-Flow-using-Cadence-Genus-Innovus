@@ -7,6 +7,99 @@
 This project demonstrates the complete physical implementation of a Full Adder using Cadence Innovus. The flow begins with importing the synthesized netlist and constraints and proceeds through floorplanning, power planning, placement, clock tree synthesis (CTS), routing, RC extraction, and timing verification.
 
 ---
+## Verilog Design
+
+### Full Adder RTL
+
+```verilog
+module full_adder(
+    input wire clk,
+    input wire a,
+    input wire b,
+    input wire cin,
+    output reg s,
+    output reg cout
+);
+
+always @(posedge clk) begin
+    s    <= a ^ b ^ cin;
+    cout <= (a & b) | (b & cin) | (a & cin);
+end
+
+endmodule
+```
+
+---
+
+### Testbench
+
+```verilog
+module tb_full_adder;
+
+reg a, b, cin, clk;
+wire s, cout;
+
+full_adder uut(
+    .a(a),
+    .b(b),
+    .cin(cin),
+    .s(s),
+    .cout(cout),
+    .clk(clk)
+);
+
+initial clk = 0;
+always #5 clk = ~clk;
+
+initial begin
+    a=0; b=0; cin=0; #5;
+    a=0; b=0; cin=1; #5;
+    a=0; b=1; cin=0; #5;
+    a=0; b=1; cin=1; #5;
+    a=1; b=0; cin=0; #5;
+    a=1; b=0; cin=1; #5;
+    a=1; b=1; cin=0; #5;
+    a=1; b=1; cin=1;
+end
+
+endmodule
+```
+
+---
+
+## Simulation Results
+
+### Functional Verification
+
+![Simulation Waveform](Screenshots/output_full_adder.png)
+
+The waveform verifies the correctness of the Full Adder for all possible input combinations of:
+
+- A
+- B
+- Cin
+
+Outputs verified:
+
+- Sum (S)
+- Carry Output (Cout)
+
+---
+
+## Physical Design Results
+
+### Final Layout
+
+![Full Adder Layout](Screenshots/fulladder_innovus_floorplan.png)
+
+The design was implemented using Cadence Innovus and includes:
+
+- Floorplanning
+- Power Planning
+- Placement
+- Routing
+- RC Extraction
+- Timing Verification
 
 ## Design Inputs
 
