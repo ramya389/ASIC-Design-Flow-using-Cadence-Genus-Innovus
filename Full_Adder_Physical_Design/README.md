@@ -86,10 +86,6 @@ Objectives:
 - Define die area
 - Improve routability
 
-### Screenshot
-
-Insert floorplan screenshot here.
-
 ---
 
 ## Power Planning
@@ -117,9 +113,6 @@ Width = 0.7
 Spacing = 0.2
 ```
 
-### Screenshot
-
-Insert power planning screenshot here.
 
 ---
 
@@ -182,9 +175,6 @@ Objectives:
 - Balance clock latency
 - Improve timing
 
-### Screenshot
-
-Insert CTS screenshot here.
 
 ---
 
@@ -204,10 +194,6 @@ Optimize Wire
 Optimize Via
 ```
 
-### Screenshot
-
-Insert routing screenshot here.
-
 ---
 
 ## RC Extraction
@@ -225,9 +211,6 @@ Purpose:
 - Extract parasitic capacitance
 - Improve timing accuracy
 
-### Screenshot
-
-Insert RC extraction screenshot here.
 
 ---
 
