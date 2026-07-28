@@ -71,7 +71,6 @@ endmodule
 
 ### Functional Verification
 
-![Simulation Waveform](Screenshots/output_full_adder.png)
 
 The waveform verifies the correctness of the Full Adder for all possible input combinations of:
 
@@ -90,7 +89,6 @@ Outputs verified:
 
 ### Final Layout
 
-![Full Adder Layout](Screenshots/fulladder_innovus_floorplan.png)
 
 The design was implemented using Cadence Innovus and includes:
 
