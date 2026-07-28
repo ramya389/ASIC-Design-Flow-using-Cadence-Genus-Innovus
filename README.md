@@ -594,24 +594,6 @@ TNS = 0
 
 ---
 
-# Repository Structure
-
-```text
-01_RTL_Synthesis
-02_SDC_Constraints
-03_PVT_Corner_Analysis
-04_Static_Timing_Analysis
-05_Post_Synthesis_Verification
-06_Floorplanning
-07_Power_Planning
-08_Placement
-09_CTS
-10_Routing
-11_RC_Extraction
-12_Post_Route_STA
-```
-
----
 
 ## Author
 
@@ -619,4 +601,3 @@ M. Ramya Sree
 B.Tech VLSI Design  
 VIT Chennai
 
-GitHub: https://github.com/ramya389
